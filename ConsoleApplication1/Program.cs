@@ -15,12 +15,14 @@ namespace ConsoleApplication1
             Debug.AutoFlush = true;
 
             Console.WriteLine();
-            
-        
+
+
             //Debug.Fail("adsfadsf");
-            var tr2 = new TextWriterTraceListener(File.CreateText("Out.txt"));
-            Debug.Listeners.Add(tr2);
-            Debug.WriteLine("dab");
+            using (var tr2 = new TextWriterTraceListener(File.CreateText("Out.txt")))
+            {
+                Debug.Listeners.Add(tr2);
+                Debug.WriteLine("dab");
+            }
 
 
         }
