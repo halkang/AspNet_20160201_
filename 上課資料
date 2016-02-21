@@ -1,0 +1,19 @@
+robofile ?
+nlog?
+di ?
+assert
+ident 縮排
+
+#if abc
+            var a = "Stage";
+#else
+            var a = "else";
+#endif
+
+debug 
+            //Debug.Fail("adsfadsf");
+            TextWriterTraceListener tr2 = new TextWriterTraceListener(File.CreateText("Out.txt"));
+            Debug.Listeners.Add(tr2);
+            Debug.WriteLine("dab");
+正式區 加LISTENER
+http://stackoverflow.com/questions/16649643/tracing-in-mvc-web-api-application            

@@ -10,7 +10,7 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Debug.AutoFlush = true;
 
@@ -18,7 +18,7 @@ namespace ConsoleApplication1
             
         
             //Debug.Fail("adsfadsf");
-            TextWriterTraceListener tr2 = new TextWriterTraceListener(File.CreateText("Out.txt"));
+            var tr2 = new TextWriterTraceListener(File.CreateText("Out.txt"));
             Debug.Listeners.Add(tr2);
             Debug.WriteLine("dab");
 
